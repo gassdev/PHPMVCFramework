@@ -8,6 +8,14 @@ use app\core\Application;
  */
 class SiteController
 {
+    public function home()
+    {
+        $params = [
+            'name' => 'Gassdev',
+        ];
+        return Application::$app->router->renderView('home', $params);
+    }
+
     public function contact()
     {
         return Application::$app->router->renderView('contact');
