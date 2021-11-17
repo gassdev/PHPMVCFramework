@@ -1,6 +1,9 @@
 <?php
 namespace app\models;
 
+/**
+ * RegisterModel
+ */
 class RegisterModel extends Model
 {
     public string $firstname;
