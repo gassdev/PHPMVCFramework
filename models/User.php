@@ -36,7 +36,11 @@ class User extends DBModel
         return [
             'firstname' => [self::RULE_REQUIRED],
             'lastname' => [self::RULE_REQUIRED],
-            'email' => [self::RULE_REQUIRED, self::RULE_EMAIL],
+            'email' => [
+                self::RULE_REQUIRED,
+                self::RULE_EMAIL,
+                [self::RULE_UNIQUE, 'class' => self::class],
+            ],
             'password' => [
                 self::RULE_REQUIRED,
                 [self::RULE_MIN, 'min' => 8],
