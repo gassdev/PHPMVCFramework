@@ -31,11 +31,6 @@ abstract class DBModel extends Model
 
         $statement->execute();
         return true;
-
-        echo '<pre>';
-        var_dump($statement, $params, $attributes);
-        echo '</pre>';
-        exit();
     }
 
     public static function prepare($sql)
